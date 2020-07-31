@@ -1,0 +1,132 @@
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'js/script1.js' %}">
+    <script src="//code.jquery.com/jquery.min.js"></script>
+    <title>Timetable</title>
+<style>
+
+#table {
+  border-collapse: separate;
+}
+ th, td {
+  padding: 5px;
+  text-align :center;
+}
+th {
+  background-color: #FFC300 ;
+  color: white;
+}
+tr:hover {background-color: #f5f0f5;}
+td:hover {background-color: #41B2E3 ;}
+tr:nth-child(even) {background-color: #f2f2f2;}
+table, td, th {
+  border: 1px solid black;
+}
+
+</style>
+</head>
+
+<br>
+<div class="container">
+  <a href="{% url 'webapp:Home' %}">←back</a>
+</div>
+
+<body bgcolor="skyblue">
+<H1><FONT COLOR="DARKCYAN"><CENTER>COLLEGE TIME TABLE</FONT></H1>
+<br>
+<table cellspacing="3" align="center" id="table">
+<tr>
+ <th >
+ <th>8:30-9:30
+ <th>9:30-10:30
+ <th>10:3-11:30
+ <th>11:30-12:30
+ <th>12:30-2:00
+ <th>2:00-3:00
+ <th>3:00-4:00
+ <th>4:00-5:00
+</tr>
+<tr id="row2">
+ <td class="editable">MONDAY
+ <td contenteditable="true" id="1">Sub
+ <td id="7"><font color="blue">Sub1<br>
+ <td contenteditable="true" id="2"><font color="pink">SUB2<br>
+ <td contenteditable="true" id="3"><font color="red">SUB3<br>
+ <td rowspan="6">L<br>U<br>N<br>C<br>H
+ <td contenteditable="true" id="4"><font color="maroon">SUB4<br>
+ <td contenteditable="true" id="5"><font color="brown">SUB5<br>
+ <td  class="editable" contenteditable="true" id="6">counselling class
+
+</tr>
+<tr id="row3">
+ <td >TUESDAY
+ <td  contenteditable="true" id="11"><font color="blue">SUB1<br>
+ <td  contenteditable="true" id="12"><font color="red">SUB2<br>
+ <td  contenteditable="true" id="13"><font color="pink">SUB3<br>
+ <td  contenteditable="true" id="14">---
+ <td  contenteditable="true" id="15" ><font color="orange">SUB4<BR>
+ <td  contenteditable="true" id="16"><font color="maroon">SUB5<br>
+ <td  contenteditable="true" id="17">library
+</tr>
+<tr>
+ <td >WEDNESDAY
+ <td  contenteditable="true" id="21"><font color="pink">SUB1<br>
+ <td  contenteditable="true" id="22"><font color="orange">SUB2<BR>
+ <td  contenteditable="true" id="23"><font color="brown">SWA<br>
+ <td  contenteditable="true" id="24">---
+ <td  contenteditable="true" id="25"><font color="green"> lab
+  <td  contenteditable="true" id="26"><font color="green"> lab
+ <td  contenteditable="true" id="27"><font color="green"> lab
+
+</tr>
+<tr>
+ <td >THURSDAY
+ <td  contenteditable="true" id="31">SUB1<br>
+ <td  contenteditable="true" id="32"><font color="brown">SUB2<br>
+ <td  contenteditable="true" id="33"><font color="orange">SUB3<BR>
+ <td  contenteditable="true" id="34">---
+ <td  contenteditable="true" id="35"><font color="blue">SUB4<br>
+ <td  contenteditable="true" id="36"><font color="red">SUB5<br>
+ <td  contenteditable="true" id="37">library
+</tr>
+<tr>
+ <td >FRIDAY
+ <td  contenteditable="true" id="41"><font color="orange">SUB1<BR>
+ <td  contenteditable="true" id="42"><font color="maroon">SUB2<br>
+ <td  contenteditable="true" id="43"><font color="blue">SUB3<br>
+ <td  contenteditable="true" id="44">---
+ <td  contenteditable="true" id="45"><font color="pink">SUB4<br>
+ <td  contenteditable="true" id="46"><font color="brown">SUB5<br>
+ <td  contenteditable="true" id="47">library
+</tr>
+<tr>
+ <td >SATURDAY
+ <td  contenteditable="true" id="51"><font color="red">SUB1<br>
+ <td  contenteditable="true" id="52">seminar
+ <td  contenteditable="true" id="53"><font color="pink">Seminar<br>
+ <td  contenteditable="true" id="54"><font color="brown">seminar<br>
+  <td  contenteditable="true" id="55"><font color="brown">SUB5<br>
+ <td  contenteditable="true" id="56"><font color="brown">SUB5<br>
+ <td  contenteditable="true" id="57">library
+</tr>
+</table>
+<div align ="center">
+ <br>
+ <button onclick="myale()" type="button" class="btn btn-success"><H6>Save Changes</H6>
+</button>
+</div>
+
+
+<script src="{% static 'js/script1.js' %}"></script>
+</body>
+</html>
+
+
+
